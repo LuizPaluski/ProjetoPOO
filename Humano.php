@@ -8,10 +8,10 @@ class Humano{
     public string $email;
     public string $telefone;
     public string $endereco;
-    public Cachorro $animal;
+    public Animal $animal;
 
 
-    public function RegitrarAnimal(Cachorro $animal)
+    public function RegitrarAnimal(Animal $animal)
     {
         $this->animal = $animal;
     }
