@@ -1,7 +1,7 @@
 <?php
 
 require_once 'Humano.php';
-require_once 'animal.php';
+require_once 'Animal.php';
 require_once 'Gato.php';
 require_once 'Cachorro.php';
 require_once 'Raposa.php';
@@ -17,38 +17,24 @@ function RegistroPessoa(Humano $pessoa): void{
     $pessoa->RegistrarDadosH($nome, $idade, $sexo, $email, $telefone, $endereco);
 }
 
-function RegistarPets(Humano $pessoa): void{
+function RegistarPets(): ?Animal {
+    $animalTipo = readline("Digite o tipo de animal (Cachorro, Gato, Raposa): \n");
+    $nome = readline("Digite o nome do animal: \n");
+    $raca = readline("Digite a raca do animal: \n");
+    $patas = 4; // Geralmente é 4, pode ser um input se variar
+    $cor = readline("Digite a cor do animal: \n");
+    $peso = (float)readline("Digite o peso do animal: \n");
+    $tamanho = (float)readline("Digite o tamanho do animal: \n");
 
-    $animal = readline("Digite o tipo de animal (Cachorro, Gato, Raposa): \n");
-    switch($animal):
+    switch($animalTipo){
         case "Cachorro":
-            $nome = readline("Digite o nome do cachorro: \n");
-            $raca = readline("Digite a raca do cachorro: \n");
-            $patas = 4;
-            $cor = readline("Digite a cor do cachorro: \n");
-            $peso = (float)readline("Digite o peso do cachorro: \n");
-            $tamanho = (float)readline("Digite o tamanho do cachorro: \n");
-            $pessoa = new Cachorro($nome, $raca, $patas, $cor, $peso, $tamanho);
-            break;
+            return new Cachorro($nome, $raca, $patas, $cor, $peso, $tamanho);
         case "Gato":
-            $nome = readline("Digite o nome do gato: \n");
-            $raca = readline("Digite a raca do gato: \n");
-            $patas = 4;
-            $cor = readline("Digite a cor do gato: \n");
-            $peso = (float)readline("Digite o peso do gato: \n");
-            $tamanho = (float)readline("Digite o tamanho do gato: \n");
-            $pessoa = new Gato($nome, $raca, $patas, $cor, $peso, $tamanho);
-            break;
+            return new Gato($nome, $raca, $patas, $cor, $peso, $tamanho);
         case "Raposa":
-            $nome = readline("Digite o nome da raposa: \n");
-            $raca = readline("Digite a raca da raposa: \n");
-            $patas = 4;
-            $cor = readline("Digite a cor da raposa: \n");
-            $peso = (float)readline("Digite o peso da raposa: \n");
-            $tamanho = (float)readline("Digite o tamanho da raposa: \n");
-            $pessoa = new Raposa($nome, $raca, $patas, $cor, $peso, $tamanho);
-            break;
+            return new Raposa($nome, $raca, $patas, $cor, $peso, $tamanho);
         default:
             echo "Tipo de animal invalido.\n";
-            endswitch;
+            return null;
+    }
 }

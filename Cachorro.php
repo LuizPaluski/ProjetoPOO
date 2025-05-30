@@ -1,8 +1,6 @@
 <?php
 require_once 'Animal.php';
 class Cachorro extends Animal{
-    public string $raca;
-    public int $idade;
     public function __construct($nome, $raca, $patas, $cor, $peso, $tamanho){
         parent::__construct($nome, $raca, $patas, $cor, $peso, $tamanho);
      
@@ -10,6 +8,6 @@ class Cachorro extends Animal{
 
     public function Falar()
     {
-        return "Au Au";
+        echo "Au Au";
     }
 }

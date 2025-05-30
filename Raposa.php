@@ -5,7 +5,6 @@ class Raposa extends Animal {
         parent::__construct($nome, $raca, $patas, $cor, $peso, $tamanho);
      
     }
- 
     public function Falar() {
         echo "ERRERERERERERE(rosnado)";
     }

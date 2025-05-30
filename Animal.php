@@ -1,5 +1,4 @@
 <?php
-require_once 'Humano.php';
 abstract class Animal{
     public string $nome;
     public string $raca;
@@ -20,10 +19,6 @@ abstract class Animal{
         $this->cor = $cor;
         $this->peso = $peso;
         $this->tamanho = $tamanho;
-     
-
 
     }
- 
-
 }
