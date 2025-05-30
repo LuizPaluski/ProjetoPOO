@@ -21,7 +21,7 @@ function RegistarPets(): ?Animal {
     $animalTipo = readline("Digite o tipo de animal (Cachorro, Gato, Raposa): \n");
     $nome = readline("Digite o nome do animal: \n");
     $raca = readline("Digite a raca do animal: \n");
-    $patas = 4; // Geralmente é 4, pode ser um input se variar
+    $patas = 4; 
     $cor = readline("Digite a cor do animal: \n");
     $peso = (float)readline("Digite o peso do animal: \n");
     $tamanho = (float)readline("Digite o tamanho do animal: \n");

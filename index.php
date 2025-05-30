@@ -20,15 +20,14 @@ while(true){
             echo "Pessoa registrada com sucesso!\n";
             break;
         case 2:
-           if(!isset($pessoa) || !$pessoa instanceof Humano){
+           if(!isset($pessoa) || !$pessoa instanceof Humano){ 
                 echo "Pessoa nao registrada ou invalida. Por favor, registre uma pessoa primeiro (Opcao 1).\n";
             }else{
                 $novoAnimal = RegistarPets(); 
-
-                if ($novoAnimal instanceof Animal) {
-                    $pessoa->AssociarPet($novoAnimal);
-                    echo "Animal registrado e associado com sucesso a $pessoa->nome!\n";
-                    $pessoa->mostrarPet();
+                if ($novoAnimal instanceof Animal) { 
+                    $pessoa->AssociarPet($novoAnimal); 
+                    echo "Animal registrado e associado com sucesso a {$pessoa->nome}!\n";
+                    $pessoa->mostrarPet(); 
                 } else {
                     echo "Falha ao registrar o animal. Tipo de animal pode ser invalido ou outros dados incorretos.\n";
                 }

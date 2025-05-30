@@ -19,6 +19,8 @@ abstract class Animal{
         $this->cor = $cor;
         $this->peso = $peso;
         $this->tamanho = $tamanho;
+     
+
 
     }
 }
