@@ -1,6 +1,6 @@
 <?php
 require_once 'Humano.php';
-class Animal{
+abstract class Animal{
     public string $nome;
     public string $raca;
     public int $patas;
@@ -13,7 +13,7 @@ class Animal{
         echo "Animal nao fala tirando o papagaio e o corvo\n";
     }
 
-    public function RegistrarAnimal($nome, $raca, $patas, $cor, $peso, $tamanho){
+    public function __construct($nome, $raca, $patas, $cor, $peso, $tamanho){
         $this->nome = $nome;
         $this->raca = $raca;
         $this->patas = $patas;

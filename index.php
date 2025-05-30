@@ -1,7 +1,7 @@
 <?php
 require_once "Animal.php";
 require_once "Humano.php";
-require_once "Funcionaios.php";
+require_once "Funcionarios.php";
 require_once "Gato.php";
 require_once "Cachorro.php";
 require_once "Raposa.php";

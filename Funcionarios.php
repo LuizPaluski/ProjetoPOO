@@ -1,5 +1,5 @@
 <?php
-require_once 'Humano.php';
+/*require_once 'Humano.php';
 
 class Funcionario extends Humano
 {
