@@ -8,15 +8,9 @@ class Humano{
     public string $email;
     public string $telefone;
     public string $endereco;
-    public Animal $animal;
 
-
-    public function RegitrarAnimal(Animal $animal)
-    {
-        $this->animal = $animal;
-    }
-
-    public function RegistrarDados(string $nome, int $idade, string $sexo, string $email, string $telefone, string $endereco)
+    
+    public function RegistrarDadosH(string $nome, int $idade, string $sexo, string $email, string $telefone, string $endereco)
     {
         $this->nome = $nome;
         $this->idade = $idade;
