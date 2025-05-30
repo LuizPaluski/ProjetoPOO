@@ -5,6 +5,6 @@ class Gato extends Animal {
         parent::__construct($nome, $raca, $patas, $cor, $peso, $tamanho);
     }
     public function Falar(){
-        echo "MIAU MIAU coloca raca pra mim e saia da minha frente. \n";
+        return "MIAU MIAU coloca raca pra mim e saia da minha frente. \n";
     }
 }

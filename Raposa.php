@@ -6,6 +6,6 @@ class Raposa extends Animal {
      
     }
     public function Falar() {
-        echo "ERRERERERERERE(rosnado)";
+        return "ERRERERERERERE(rosnado) talvez a raposa fale assim";
     }
 }

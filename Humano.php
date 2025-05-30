@@ -16,12 +16,6 @@ class Humano{
         $this->pet = $pet;
     }
 
-     public function mostrarPet(): void{
-         echo "O pet de {$this->nome} é {$this->pet->nome} ({$this->pet->raca}).\n";
-     }
-
-
-    
     public function RegistrarDadosH(string $nome, int $idade, string $sexo, string $email, string $telefone, string $endereco): void
     {
         $this->nome = $nome;

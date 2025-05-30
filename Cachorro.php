@@ -8,6 +8,6 @@ class Cachorro extends Animal{
 
     public function Falar()
     {
-        echo "Au Au";
+        return "Au Au";
     }
 }

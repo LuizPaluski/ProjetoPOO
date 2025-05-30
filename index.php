@@ -1,7 +1,6 @@
 <?php
 require_once "Animal.php";
 require_once "Humano.php";
-
 require_once "Gato.php";
 require_once "Cachorro.php";
 require_once "Raposa.php";
@@ -26,11 +25,14 @@ while(true){
                 $novoAnimal = RegistarPets(); 
                 if ($novoAnimal instanceof Animal) { 
                     $pessoa->AssociarPet($novoAnimal); 
-                    echo "Animal registrado e associado com sucesso a {$pessoa->nome}!\n";
-                    $pessoa->mostrarPet(); 
-                } else {
-                    echo "Falha ao registrar o animal. Tipo de animal pode ser invalido ou outros dados incorretos.\n";
+                    echo "Animal registrado e associado com sucesso a {$pessoa->nome}!\n"; 
                 }
+            }
+        case 3:
+            if (isset($pessoa) && $pessoa instanceof Humano && $pessoa->pet instanceof Animal) {
+                echo "O pet de". " {$pessoa->nome}, {$pessoa->pet->nome}, faz: ". "{$pessoa->pet->Falar()}\n";
+            } else {
+                echo "Nenhuma pessoa com pet registrado encontrada. Registre uma pessoa e um pet primeiro.\n";
             }
             break;
         default:
