@@ -7,8 +7,7 @@ class Animal{
     public string $cor;
     public float $peso;
     public float $tamanho;
-
-    function Falar()
+=    function Falar()
     {
         
     }
