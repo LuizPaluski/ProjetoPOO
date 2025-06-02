@@ -9,12 +9,13 @@ class Funcionarios extends Humano
     public float $salario = 0.0;
     public float $preco;
     public string $produto;
+    public ?Humano $pessoa;
 
     public function Vender(): void
     {
         $this->produto = (string)readline("Digite o produto;\n");
         $this->preco = (float)readline("Digite o Valor: \n");
-        echo "Produto: $this->produto, Preco: $this->preco\n";
+        echo "Produto: $this->produto, Preco: $this->preco\n foi comprado por $this->pessoa";
         $num = (int)readline("Aperte 1 para sair:\n");
         switch($num):
             case 1:

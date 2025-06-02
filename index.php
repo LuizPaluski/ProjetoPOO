@@ -7,15 +7,14 @@ require_once "Cachorro.php";
 require_once "Raposa.php";
 require_once "Registros.php";
 
-function TelaInicial(): void
-{
+while(true){
         echo "Bem vindo ao servidor da LuizPets!\n";
         echo "Escolha uma funcao:\n";
         echo "1. Registrar Pessoa\n";
         echo "2. Registrar Pets\n";
         echo "3. Ouvir Animal\n";
         echo "4. Sistema funcionarios: \n";
-        $opcao = (int)readline("Digite a opcao: \n");
+        $opcao = readline("Digite a opcao: \n");
         switch ($opcao):
             case 1:
                 $pessoa = new Humano();
@@ -44,7 +43,7 @@ function TelaInicial(): void
                 $senhafuncionario = readline("Digite a senha: ");
                 if ($senhafuncionario == "naotemsenha") {
                     $funcionario = new Funcionarios();
-                    echo $funcionario->Pagamento() . $funcionario->Trabalhar() . $funcionario->Vender();
+                    echo $funcionario->Pagamento() . $funcionario->Trabalhar();
                     while (true) {
                         $funcionario->Vender();
                     }
@@ -56,6 +55,3 @@ function TelaInicial(): void
 
 }
 
-while(true){
-    TelaInicial();
-}

@@ -7,12 +7,12 @@ require_once 'Cachorro.php';
 require_once 'Raposa.php';
 
 function RegistroPessoa(Humano $pessoa): void{
-    $nome = (string)readline("Digite o nome: \n");
-    $idade = (int)readline("Digite a idade: \n");
-    $sexo = (string)readline("Digite o sexo M ou F: \n");
-    $email = (string)readline("Digite o email: \n");
-    $telefone = (int)readline("Digite o telefone: \n");
-    $endereco = (string)(int)readline("Digite o endereco: \n");
+    $nome = readline("Digite o nome: \n");
+    $idade = readline("Digite a idade: \n");
+    $sexo = readline("Digite o sexo M ou F: \n");
+    $email = readline("Digite o email: \n");
+    $telefone = readline("Digite o telefone: \n");
+    $endereco = readline("Digite o endereco: \n");
 
     $pessoa->RegistrarDadosH($nome, $idade, $sexo, $email, $telefone, $endereco);
 }
@@ -22,7 +22,7 @@ function RegistarPets(): ?Animal {
     $nome = (string)readline("Digite o nome do animal: \n");
     $raca = (string)readline("Digite a raca do animal: \n");
     $patas = 4; 
-    $cor = (string)readline("Digite a cor do animal: \n");
+    $cor = readline("Digite a cor do animal: \n");
     $peso = (float)readline("Digite o peso do animal: \n");
     $tamanho = (float)readline("Digite o tamanho do animal: \n");
 
