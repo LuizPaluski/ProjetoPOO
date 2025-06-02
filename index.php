@@ -15,7 +15,7 @@ function TelaInicial(): void
         echo "2. Registrar Pets\n";
         echo "3. Ouvir Animal\n";
         echo "4. Sistema funcionarios: \n";
-        $opcao = readline("Digite a opcao: \n");
+        $opcao = (int)readline("Digite a opcao: \n");
         switch ($opcao):
             case 1:
                 $pessoa = new Humano();
