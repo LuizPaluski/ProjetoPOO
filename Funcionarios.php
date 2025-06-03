@@ -2,6 +2,7 @@
 require_once 'Humano.php';
 require_once "Vendas.php";
 require_once "index.php";
+require_once "Registros.php";
 
 class Funcionarios extends Humano
 {
@@ -9,18 +10,16 @@ class Funcionarios extends Humano
     public float $salario = 0.0;
     public float $preco;
     public string $produto;
-    public ?Humano $pessoa;
+
 
     public function Vender(): void
     {
-        $this->produto = (string)readline("Digite o produto;\n");
+        $this->produto = (string)readline("Digite o produto: \n");
         $this->preco = (float)readline("Digite o Valor: \n");
-        echo "Produto: $this->produto, Preco: $this->preco\n foi comprado por $this->pessoa";
+        $comprador = readline("Nome do comprador: \n");
+        echo "Produto: $this->produto, Preco: R$$this->preco foi comprado por $comprador \n";
         $num = (int)readline("Aperte 1 para sair:\n");
-        switch($num):
-            case 1:
-                TelaInicial();
-                endswitch;
+
 
     }
 

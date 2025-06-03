@@ -9,7 +9,7 @@ abstract class Animal{
 
     function Falar( )
     {
-        echo "Animal nao fala tirando o papagaio e o corvo\n";
+
     }
 
     public function __construct($nome, $raca, $patas, $cor, $peso, $tamanho){
