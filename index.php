@@ -6,7 +6,7 @@ require_once "Gato.php";
 require_once "Cachorro.php";
 require_once "Raposa.php";
 require_once "Registros.php";
-
+function TelaVenda(): void{
 while(true){
         echo "Bem vindo ao servidor da LuizPets!\n";
         echo "Escolha uma funcao:\n";
@@ -43,15 +43,25 @@ while(true){
                 $senhafuncionario = readline("Digite a senha: ");
                 if ($senhafuncionario == "naotemsenha") {
                     $funcionario = new Funcionarios();
-                    echo $funcionario->Pagamento() . $funcionario->Trabalhar();
-                    while (true) {
-                        $funcionario->Vender();
+                    echo $funcionario->Pagamento();
+                    if(isset($funcionario) && $funcionario instanceof Funcionarios){
+                        while (true) {
+                            $funcionario->Vender();
+                            $funcionario->Trabalhar();
+                        }
                     }
+
+
                 }
             default:
                 echo "Opcao invalida. Tente novamente!.\n";
                 break;
         endswitch;
 
+}
+}
+
+while(true){
+    TelaVenda();
 }
 

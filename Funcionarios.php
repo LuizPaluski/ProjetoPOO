@@ -17,12 +17,11 @@ class Funcionarios extends Humano
         $this->produto = (string)readline("Digite o produto: \n");
         $this->preco = (float)readline("Digite o Valor: \n");
         $comprador = readline("Nome do comprador: \n");
-        echo "Produto: $this->produto, Preco: R$$this->preco foi comprado por $comprador \n";
+        echo "Produto: $this->produto, Preco: $this->preco foi comprado por $comprador \n";
         $num = (int)readline("Aperte 1 para sair:\n");
-        switch($num):
-            case 1:
-                return;
-                endswitch;
+        if($num == 1){
+            TelaVenda();
+        }
 
 
     }
